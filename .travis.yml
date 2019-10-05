@@ -20,8 +20,6 @@ before_install:
 install:
   - yarn build
 
-test: false 
-
 deploy:
   provider: pages
   skip_cleanup: false
