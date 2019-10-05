@@ -1,0 +1,29 @@
+git:
+  depth: 1
+
+matrix:
+  fast_finish: true
+
+language: node_js
+
+node_js:
+  - '12'
+
+dist: trusty
+
+branches:
+  only:
+    - master
+before_install:
+  - yarn
+
+install:
+  - yarn build
+
+deploy:
+  provider: pages
+  skip_cleanup: false
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: false
+  on:
+    branch: master
