@@ -20,7 +20,10 @@ branches:
   only:
     - master
 
-build:
+before_install:
+  - yarn
+
+install:
   - yarn build
 
 deploy:
