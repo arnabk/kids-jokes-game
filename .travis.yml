@@ -6,7 +6,10 @@ matrix:
 
 language: node_js
 
-cache: yarn
+cache:
+  - directories:
+    - node_modules
+    - build
 
 node_js:
   - '12'
