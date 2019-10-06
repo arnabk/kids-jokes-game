@@ -10,7 +10,6 @@ cache:
   yarn: true
   directories:
     - node_modules
-    - build
 
 node_js:
   - '12'
@@ -23,13 +22,10 @@ branches:
 
 build:
   - yarn build
-  - cache
-    - directories
-      - build
 
 deploy:
   provider: pages
-  skip_cleanup: false
+  skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: false
   local_dir: ./build/
