@@ -7,20 +7,21 @@ matrix:
 language: node_js
 
 cache:
-  - directories:
+  yarn: true
+  directories:
     - node_modules
     - build
 
 node_js:
   - '12'
 
-dist: trusty
+dist: bionic
 
 branches:
   only:
     - master
 
-after_script:
+build:
   - yarn build
   - cache
     - directories
