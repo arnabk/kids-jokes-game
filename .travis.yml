@@ -19,11 +19,12 @@ dist: trusty
 branches:
   only:
     - master
-before_install:
-  - yarn
 
-install:
+after_script:
   - yarn build
+  - cache
+    - directories
+      - build
 
 deploy:
   provider: pages
