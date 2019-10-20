@@ -1,8 +1,11 @@
 import React, { useContext, useState } from "react";
-import questions from "./questions.json";
+import shuffle from 'lodash/shuffle';
+import originalOrderedQuestions from "./questions.json";
 import { Context } from "./Context";
 import Question from "./Question";
 import Answer from "./Answer";
+
+const questions = shuffle(originalOrderedQuestions);
 
 const Game = () => {
   const {
