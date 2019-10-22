@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
-import classname from "classname";
+import classname from 'classname';
 import React from "react";
 
 const useStyles = makeStyles(theme => ({
